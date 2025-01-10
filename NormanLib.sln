@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35527.113 d17.12
+VisualStudioVersion = 17.12.35527.113
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormanLib", "NormanLib\NormanLib.csproj", "{DBB0F9DB-2E6C-41B6-81DD-336539DF7628}"
 EndProject
@@ -13,6 +13,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "方案項目", "方案項�
 		README.md = README.md
 	EndProjectSection
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NormanLibTests", "NormanLibTests\NormanLibTests.csproj", "{F687C9F9-B8BB-4CC3-AEDE-FBD957FA18BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{DBB0F9DB-2E6C-41B6-81DD-336539DF7628}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DBB0F9DB-2E6C-41B6-81DD-336539DF7628}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{DBB0F9DB-2E6C-41B6-81DD-336539DF7628}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F687C9F9-B8BB-4CC3-AEDE-FBD957FA18BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F687C9F9-B8BB-4CC3-AEDE-FBD957FA18BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F687C9F9-B8BB-4CC3-AEDE-FBD957FA18BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F687C9F9-B8BB-4CC3-AEDE-FBD957FA18BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

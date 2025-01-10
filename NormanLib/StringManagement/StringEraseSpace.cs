@@ -36,6 +36,7 @@ namespace NormanLib.StringManagement
 
             StringBuilder stringBuilder = new StringBuilder(stringToBeEracedSpace, stringToBeEracedSpace.Length);
 
+            // 移除空格後的字串
             string subStringToBeEracedSpace = Regex.Replace(stringToBeEracedSpace.Substring(startIndex), @"\s+", string.Empty);
 
             stringBuilder.Remove(startIndex, stringToBeEracedSpace.Length - startIndex);
