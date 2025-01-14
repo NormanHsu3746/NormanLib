@@ -20,16 +20,9 @@ namespace NormanLib.Enums
         /// <returns>列舉成員名稱</returns>
         public static string MemberName(T enumMember)
         {
-            string? enumMemberName = Enum.GetName(typeof(T), enumMember);
+            string enumMemberName = Enum.GetName(typeof(T), enumMember) ?? "Unknown";
 
-            if (enumMemberName is null)
-            {
-                return "Unknown";
-            }
-            else
-            {
-                return enumMemberName;
-            }
+            return enumMemberName;
         }
 
         /// <summary>
@@ -55,7 +48,7 @@ namespace NormanLib.Enums
                 }
                 else
                 {
-                    return $"尚未設定此列舉成員 {enumMemberType.Name}.{enumMemberName} 的說明";
+                    return $"Lack of description: {enumMemberType.Name}.{enumMemberName}.";
                 }
             }
         }

@@ -15,27 +15,27 @@ namespace NormanLib.Enums.Time
         None = 0,
 
         /// <summary>
-        /// 春天
+        /// 春
         /// </summary>
-        [Description("春天")]
+        [Description("春")]
         Spring = EnumMonth.March | EnumMonth.April | EnumMonth.May,
 
         /// <summary>
-        /// 夏天
+        /// 夏
         /// </summary>
-        [Description("夏天")]
+        [Description("夏")]
         Summer = EnumMonth.June | EnumMonth.July | EnumMonth.August,
 
         /// <summary>
-        /// 秋天
+        /// 秋
         /// </summary>
-        [Description("秋天")]
+        [Description("秋")]
         Autumn = EnumMonth.September | EnumMonth.Octobor | EnumMonth.November,
 
         /// <summary>
-        /// 冬天
+        /// 冬
         /// </summary>
-        [Description("冬天")]
+        [Description("冬")]
         Winter = EnumMonth.December | EnumMonth.January | EnumMonth.February,
 
         /// <summary>
