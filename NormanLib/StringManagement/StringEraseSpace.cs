@@ -16,9 +16,7 @@ namespace NormanLib.StringManagement
         public static string EraseSpace(this string stringToBeEracedSpace)
         {
             // @"\s+" 代表正規表達式中的空格
-            stringToBeEracedSpace = Regex.Replace(stringToBeEracedSpace, @"\s+", string.Empty);
-
-            return stringToBeEracedSpace;
+            return Regex.Replace(stringToBeEracedSpace, @"\s+", string.Empty);
         }
 
         /// <summary>
@@ -36,15 +34,10 @@ namespace NormanLib.StringManagement
 
             StringBuilder stringBuilder = new StringBuilder(stringToBeEracedSpace, stringToBeEracedSpace.Length);
 
-            // 移除空格後的字串
-            string subStringToBeEracedSpace = Regex.Replace(stringToBeEracedSpace.Substring(startIndex), @"\s+", string.Empty);
-
             stringBuilder.Remove(startIndex, stringToBeEracedSpace.Length - startIndex);
-            stringBuilder.Append(subStringToBeEracedSpace);
+            stringBuilder.Append(Regex.Replace(stringToBeEracedSpace.Substring(startIndex), @"\s+", string.Empty));
 
-            stringToBeEracedSpace = stringBuilder.ToString();
-
-            return stringToBeEracedSpace;
+            return stringBuilder.ToString();
         }
 
         /// <summary>
