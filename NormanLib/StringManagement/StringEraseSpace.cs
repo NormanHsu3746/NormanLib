@@ -65,19 +65,15 @@ namespace NormanLib.StringManagement
             {
                 StringBuilder stringBuilder = new StringBuilder(stringToBeEracedSpace, stringToBeEracedSpace.Length);
 
-                string subStringToBeEracedSpace = Regex.Replace(stringToBeEracedSpace.Substring(startIndex, length), @"\s+", string.Empty);
-
                 stringBuilder.Remove(startIndex, length);
-                stringBuilder.Insert(startIndex, subStringToBeEracedSpace);
+                stringBuilder.Insert(startIndex, Regex.Replace(stringToBeEracedSpace.Substring(startIndex, length), @"\s+", string.Empty));
 
-                stringToBeEracedSpace = stringBuilder.ToString();
+                return stringBuilder.ToString();
             }
             else
             {
-                stringToBeEracedSpace = stringToBeEracedSpace.EraseSpace(startIndex);
+                return stringToBeEracedSpace.EraseSpace(startIndex);
             }
-
-            return stringToBeEracedSpace;
         }
     }
 }
