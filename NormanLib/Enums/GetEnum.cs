@@ -11,19 +11,27 @@ namespace NormanLib.Enums
         /// <summary>
         /// 列舉名稱
         /// </summary>
-        public static string Name { get; } = typeof(T).Name;
+        /// <returns></returns>
+        public static string Name() => typeof(T).Name;
 
         /// <summary>
         /// 取得列舉成員名稱
         /// </summary>
         /// <param name="enumMember">列舉成員</param>
         /// <returns>列舉成員名稱</returns>
-        public static string MemberName(T enumMember)
-        {
-            string enumMemberName = Enum.GetName(typeof(T), enumMember) ?? "Unknown";
+        public static string MemberName(T enumMember) => Enum.GetName(typeof(T), enumMember) ?? "Unknown";
 
-            return enumMemberName;
-        }
+        /// <summary>
+        /// 列舉成員陣列
+        /// </summary>
+        /// <returns></returns>
+        public static Array Values() => typeof(T).GetEnumValues();
+
+        /// <summary>
+        /// 列舉成員陣列
+        /// </summary>
+        /// <returns></returns>
+        public static string[] MemberNames() => typeof(T).GetEnumNames();
 
         /// <summary>
         /// 取得列舉成員說明
